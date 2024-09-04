@@ -6,7 +6,7 @@ resource "hcp_project" "new_project" {
 # Create a service principal for the project as admin
 #####################################################
 resource "hcp_service_principal" "project_spn" {
-  name   = "spn-${hcp_project.new_project.resource_name}"
+  name   = "spn-${var.project_name}"
   parent = hcp_project.new_project.resource_name
 }
 
