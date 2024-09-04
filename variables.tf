@@ -1,6 +1,5 @@
-variables {
-  name = "project_name"
-  type = "string"
+variable "project_name" {
+  type = string
   description = "The name of the project in which the vault secrets app(s) will be created."
 
   validation {
