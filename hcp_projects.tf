@@ -12,8 +12,8 @@ resource "hcp_service_principal" "project_spn" {
 
 
 resource "hcp_project_iam_binding" "project_owner" {
-  project_id   = hcp_project.new_project.id
-  principal_id = hcp_service_principal.project_spn.id
+  project_id   = hcp_project.new_project.resource_id
+  principal_id = hcp_service_principal.project_spn.resource_id
   role         = "roles/admin"
 }
 
