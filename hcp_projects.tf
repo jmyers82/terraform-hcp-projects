@@ -14,6 +14,6 @@ resource "hcp_service_principal" "project_spn" {
 resource "hcp_project_iam_binding" "secrets_app_manager" {
   project_id   = hcp_project.new_project.resource_id
   principal_id = hcp_service_principal.project_spn.resource_id
-  role         = "roles/secrets.app manager"
+  role         = "roles/secrets.app-manager"
 }
 
