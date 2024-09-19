@@ -33,3 +33,9 @@ variable "description" {
     error_message = "The description must be less than 256 characters"
   }
 }
+
+variable "tfe_organization" {
+  type        = string
+  description = "value of the TFE organization"
+  default = "hashiconf22"
+}
