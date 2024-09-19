@@ -42,7 +42,7 @@ resource "tfe_variable" "app_specific_organization_id" {
 }
 
 resource "tfe_variable" "app_specific_project_id" {
-  key             = "PROJECT_ID "
+  key             = "PROJECT_ID"
   value           = tfe_project.app_specific_project.id
   category        = "env"
   description     = "PROJECT_ID"
