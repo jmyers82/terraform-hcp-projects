@@ -17,3 +17,7 @@ resource "hcp_project_iam_binding" "secrets_app_manager" {
   role         = "roles/secrets.app-manager"
 }
 
+resource "hcp_service_principal_key" "project_spn_key" {
+  service_principal = hcp_service_principal.project_spn.resource_name
+}
+
