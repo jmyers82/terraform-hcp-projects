@@ -37,5 +37,5 @@ variable "description" {
 variable "tfe_organization" {
   type        = string
   description = "value of the TFE organization"
-  default = "hashiconf22"
+  default     = "hashiconf22"
 }

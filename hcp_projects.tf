@@ -1,5 +1,5 @@
 resource "hcp_project" "new_project" {
-  name = var.project_name
+  name = lower(var.project_name)
 }
 
 #####################################################
