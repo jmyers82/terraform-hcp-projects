@@ -3,7 +3,7 @@
 
 resource "tfe_project" "app_specific_project" {
   organization = var.tfe_organization
-  name = lower("${var.project_name}-project")
+  name         = lower("${var.project_name}-project")
 }
 
 resource "tfe_variable_set" "app_specific_var_set" {
@@ -48,5 +48,3 @@ resource "tfe_variable" "app_specific_project_id" {
   description     = "PROJECT_ID"
   variable_set_id = tfe_variable_set.app_specific_var_set.id
 }
-
-jmyers82/terraform-hcp-projects
