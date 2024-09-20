@@ -40,7 +40,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_TFE_TOKEN"></a> [TFE\_TOKEN](#input\_TFE\_TOKEN) | The Terraform Cloud API token | `string` | n/a | yes |
+| <a name="input_TFE_TOKEN_TFE"></a> [TFE\_TOKEN\_TFE](#input\_TFE\_TOKEN\_TFE) | The Terraform Cloud API token | `string` | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | The description of the project. | `string` | n/a | yes |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | The name of the project in which the vault secrets app(s) will be created. | `string` | n/a | yes |
 | <a name="input_tfe_organization"></a> [tfe\_organization](#input\_tfe\_organization) | value of the TFE organization | `string` | `"hashiconf22"` | no |
