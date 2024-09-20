@@ -22,11 +22,10 @@ No modules.
 | Name | Type |
 |------|------|
 | [hcp_project.new_project](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/project) | resource |
+| [hcp_project_iam_binding.owner](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/project_iam_binding) | resource |
 | [hcp_project_iam_binding.secrets_app_manager](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/project_iam_binding) | resource |
 | [hcp_service_principal.project_spn](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/service_principal) | resource |
 | [hcp_service_principal_key.project_spn_key](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/service_principal_key) | resource |
-| [hcp_waypoint_template.app_specific_template](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/waypoint_template) | resource |
-| [hcp_waypoint_tfc_config.tfe_config](https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/waypoint_tfc_config) | resource |
 | [tfe_project.app_specific_project](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/project) | resource |
 | [tfe_project_variable_set.app_specific_var_set](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/project_variable_set) | resource |
 | [tfe_variable.app_specific_client_id](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
