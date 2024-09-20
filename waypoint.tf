@@ -1,3 +1,8 @@
+resource "hcp_waypoint_tfc_config" "tfe_config" {
+  token        = var.TFE_TOKEN
+  tfc_org_name = var.tfe_organization
+}
+
 resource "hcp_waypoint_template" "app_specific_template" {
   name                            = "${hcp_project.new_project.resource_name}-app-creator"
   description                     = "Create Vault Secrets Apps in the ${hcp_project.new_project.name} project."
