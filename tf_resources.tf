@@ -1,6 +1,3 @@
-
-
-
 resource "tfe_project" "app_specific_project" {
   organization = var.tfe_organization
   name         = lower("${var.project_name}-project")
