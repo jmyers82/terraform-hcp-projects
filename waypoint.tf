@@ -1,7 +1,7 @@
 resource "hcp_waypoint_tfc_config" "tfe_config" {
   token        = var.tfe_token_tfe
   tfc_org_name = var.tfe_organization
-  project_id   = hcp_project.new_project.id
+  project_id   = hcp_project.new_project.resource_id
 }
 
 resource "hcp_waypoint_template" "app_specific_template" {
