@@ -43,5 +43,4 @@ variable "tfe_organization" {
 variable "tfe_token_tfe" {
   type        = string
   description = "The Terraform Cloud API token"
-  default     = ""
 }
