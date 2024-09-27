@@ -1,5 +1,5 @@
 resource "hcp_waypoint_tfc_config" "tfe_config" {
-  token        = var.TFE_TOKEN_TFE
+  token        = var.tfe_token_tfe
   tfc_org_name = var.tfe_organization
 }
 

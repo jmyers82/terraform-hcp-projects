@@ -40,7 +40,8 @@ variable "tfe_organization" {
   default     = "hashiconf22"
 }
 
-variable "TFE_TOKEN_TFE" {
+variable "tfe_token_tfe" {
   type        = string
   description = "The Terraform Cloud API token"
+  default = ""
 }
