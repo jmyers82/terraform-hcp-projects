@@ -1,6 +1,7 @@
 resource "hcp_waypoint_tfc_config" "tfe_config" {
   token        = var.tfe_token_tfe
   tfc_org_name = var.tfe_organization
+  project_id   = hcp_project.new_project.id
 }
 
 resource "hcp_waypoint_template" "app_specific_template" {
@@ -10,5 +11,5 @@ resource "hcp_waypoint_template" "app_specific_template" {
   summary                         = "Create Vault Secrets Apps in the ${hcp_project.new_project.name} project."
   terraform_no_code_module_source = "hashiconf22/vault-secrets-apps"
   terraform_project_id            = tfe_project.app_specific_project.id
-  depends_on = [ hcp_waypoint_tfc_config.tfe_config ]
+  depends_on                      = [hcp_waypoint_tfc_config.tfe_config]
 }
