@@ -2,7 +2,7 @@
 resource "time_sleep" "wait_60_seconds" {
   depends_on = [hcp_project.new_project]
 
-  create_duration = "60s"
+  create_duration = "180s"
 }
 
 resource "hcp_waypoint_tfc_config" "tfe_config" {
@@ -14,10 +14,17 @@ resource "hcp_waypoint_tfc_config" "tfe_config" {
 
 resource "hcp_waypoint_template" "app_specific_template" {
   name                            = "${hcp_project.new_project.resource_name}-app-creator"
-  description                     = "Create Vault Secrets Apps in the ${hcp_project.new_project.name} project."
+  description                     = "Create Vault Secrets Apps in the ${hcp_project.new_project.resource_name} project."
   project_id                      = hcp_project.new_project.resource_id
-  summary                         = "Create Vault Secrets Apps in the ${hcp_project.new_project.name} project."
+  summary                         = "Create Vault Secrets Apps in the ${hcp_project.new_project.resource_name} project."
   terraform_no_code_module_source = "hashiconf22/vault-secrets-apps"
   terraform_project_id            = tfe_project.app_specific_project.id
+
+# will remove this once new hcp provider is pushed soon (9/27)
+  terraform_cloud_workspace_details = {
+    name = hcp_project.new_project.resource_name
+    terraform_project_id = tfe_project.app_specific_project.id
+  }
+
   depends_on                      = [hcp_waypoint_tfc_config.tfe_config]
 }
